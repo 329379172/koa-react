@@ -1,0 +1,33 @@
+.category {
+    width: 100%;
+    display: flex;
+    margin-top: 17px;
+    .categoryItem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon{
+            img {
+                width: 50px;
+            }
+        }
+        .title {
+            color: #436c80;
+            margin-top: 10px;
+            line-height: 20px;
+        }
+        .describe {
+            font-size: 12px;
+            height: 20px;
+            line-height: 20px;
+            color: #bbb;
+        }
+        .post {
+            margin-top: 17px;
+            img {
+                width: 80px;
+            }
+        }
+    }
+}
