@@ -1,11 +1,10 @@
-const webpack = require('webpack');
 const path = require('path');
 process.noDeprecation = true;
 
 module.exports = {
-    entry: './src/app.js',
+    entry: './client/src/app.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'client/dist'),
         filename: 'bundle.js'
     },
     module: {
@@ -13,7 +12,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 include: [
-                    path.resolve(__dirname, 'src')
+                    path.resolve(__dirname, 'client/src')
                 ],
                 loader: 'babel-loader',
                 options: {
@@ -37,6 +36,14 @@ module.exports = {
                 loader: 'style-loader!css-loader'
             },
             {
+                test: /\.scss$/,
+                use: [
+                    {loader: "style-loader"},
+                    {loader: "css-loader"},
+                    {loader: "sass-loader"}
+                ]
+            },
+            {
                 test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
                 loader: 'file-loader'
             }
@@ -45,14 +52,14 @@ module.exports = {
     devServer: {
         proxy: {
             '/user': 'http://localhost:3000',
-            '/test': 'http://localhost:3000'
+            '/test': 'http://localhost:3000',
+            '/api': 'http://localhost:3000'
         },
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, './client/dist'),
         compress: true,
         historyApiFallback: true,
         host: true, 
         https: false,
-        noInfo: true,
         port: 9000,
         host: '0.0.0.0'
     },
