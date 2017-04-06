@@ -1,6 +1,6 @@
 const React = require('react');
 import CategoryItemCompoent from './category.item'
-import '../../../public/css/category.scss';
+import '../../../assets/css/category.scss';
 
 
 

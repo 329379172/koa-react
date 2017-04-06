@@ -1,6 +1,6 @@
 const React = require('react');
 
-import homeCss from '../../public/css/home.scss';
+import homeCss from '../../assets/css/home.scss';
 import store from '../store/index';
 import homeAction from '../actions/actions';
 import CategoryComponent from './home/category';

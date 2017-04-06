@@ -2,9 +2,9 @@ const path = require('path');
 process.noDeprecation = true;
 
 module.exports = {
-    entry: './client/src/app.js',
+    entry: './public/src/app.js',
     output: {
-        path: path.resolve(__dirname, 'client/dist'),
+        path: path.resolve(__dirname, 'public/dist'),
         filename: 'bundle.js'
     },
     module: {
@@ -12,7 +12,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 include: [
-                    path.resolve(__dirname, 'client/src')
+                    path.resolve(__dirname, 'public/src')
                 ],
                 loader: 'babel-loader',
                 options: {
@@ -55,7 +55,7 @@ module.exports = {
             '/test': 'http://localhost:3000',
             '/api': 'http://localhost:3000'
         },
-        contentBase: path.join(__dirname, './client/dist'),
+        contentBase: path.join(__dirname, './public/dist'),
         compress: true,
         historyApiFallback: true,
         host: true, 
