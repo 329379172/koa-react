@@ -1,7 +1,7 @@
 {
-  "name": "qq-cluster",
+  "name": "koa-react-webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "koa react webpak",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -21,10 +21,11 @@
     "file-loader": "^0.10.1",
     "jquery": "^3.2.1",
     "node-sass": "^4.5.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-router": "^3.0.0",
-    "react-router-dom": "^4.0.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-logger": "^2.10.2",
     "redux-thunk": "^2.2.0",
@@ -40,6 +41,7 @@
   "dependencies": {
     "koa": "^2.2.0",
     "koa-log": "^2.1.0",
-    "koa-router": "^7.0.1"
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0"
   }
 }

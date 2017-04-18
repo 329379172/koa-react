@@ -1,15 +1,19 @@
-import { render} from 'react-dom';
+import { render } from 'react-dom';
 import { logger } from 'redux-logger';
-import { Router, Route, hashHistory } from 'react-router';
+import {
+    HashRouter,
+    Route,
+    Link
+} from 'react-router-dom';
 
 const React = require('react');
 
 import HomeComponent from './components/home';
 
 render((
-    <Router history={hashHistory}>
-        <Route path="/" component={HomeComponent}/>
-    </Router>
+    <HashRouter>
+        <Route path="/" component={HomeComponent} />
+    </HashRouter>
 ), document.getElementById('app'));
 
 
