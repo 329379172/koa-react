@@ -6,6 +6,7 @@
 # Quick Start Install
 
 1. git clone https://github.com/329379172/koa-react.git
-2. npm install
+2. npm install --production
 3. npm start
-4. npm run dev 
+
+##### Online demo: http://react.fastqiu.com/
